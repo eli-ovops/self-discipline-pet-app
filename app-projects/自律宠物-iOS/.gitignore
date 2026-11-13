@@ -1,0 +1,40 @@
+# Local OS and Xcode user state
+.DS_Store
+xcuserdata/
+*.xcuserstate
+
+# Reproducible build, test, cache, and local-tool output
+build/
+DerivedData/
+.codex-derived-data-v04/
+.build/
+.swiftpm/
+*.xcresult/
+*.xccovreport
+*.log
+
+# Historical/local QA packages and temporary evidence (not release assets)
+Evidence/
+ReviewPackages/
+.reasonix/
+.planning/
+
+# Never version local credentials or credential-shaped paths
+.env
+.env.*
+*.pem
+*.key
+*.p8
+*.p12
+*.cer
+*.mobileprovision
+*.provisionprofile
+*.cookie
+**/.env
+**/.env.*
+**/secrets/
+**/secret/
+**/keys/
+**/tokens/
+**/cookies/
+**/ssh/

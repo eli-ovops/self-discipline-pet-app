@@ -1,0 +1,13 @@
+{
+  "images" : [
+    {
+      "filename" : "milo-live-fallback.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

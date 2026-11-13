@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0.0",
+  "generated_for": "Focumi Milo Keyframe Request Package — planning only; no generation or runtime adoption authorized",
+  "authority": {
+    "prd": "Docs/Focumi_v0.6_Milo_Only_Core_Experience_PRD_Final.md",
+    "identity_source_root": "Design/CharacterAssets/VintageShojo/Approved/Milo/",
+    "formal_route_sources": [
+      "DisciplinedPet/Features/FriendMVP/FriendMVPView.swift",
+      "DisciplinedPet/Features/FriendMVP/CompanionPresentation.swift",
+      "DisciplinedPet/Features/FriendMVP/PetAvatarView.swift"
+    ],
+    "hard_boundary": "v0.6 runtime remains static Approved Milo only; this manifest is not permission to create, import, or play animation assets."
+  },
+  "assets": [
+    {"path": "Design/CharacterAssets/VintageShojo/Approved/Milo/milo_idle_v1.png", "canvas": "1254x1254 RGBA", "alpha_bbox": [128,66,1033,1205], "formal_status": "formal welcome/Meet/Setup"},
+    {"path": "Design/CharacterAssets/VintageShojo/Approved/Milo/milo_pact_v1.png", "canvas": "1254x1254 RGBA", "alpha_bbox": [212,174,965,1147], "formal_status": "candidate; no current MiloStaticPoseView mapping"},
+    {"path": "Design/CharacterAssets/VintageShojo/Approved/Milo/milo_focus_v2.png", "canvas": "1254x1254 RGBA", "alpha_bbox": [39,181,1200,1075], "formal_status": "formal focus"},
+    {"path": "Design/CharacterAssets/VintageShojo/Approved/Milo/milo_return_v1.png", "canvas": "1254x1254 RGBA", "alpha_bbox": [187,120,1067,1162], "formal_status": "formal waiting/return"},
+    {"path": "Design/CharacterAssets/VintageShojo/Approved/Milo/milo_complete_v1.png", "canvas": "1254x1254 RGBA", "alpha_bbox": [198,180,1049,1080], "formal_status": "formal completion"}
+  ],
+  "coordinate_contract": {
+    "master_canvas": {"width": 1254, "height": 1254, "mode": "RGBA", "background": "transparent"},
+    "root_anchor": {"x": 627, "y": 1254, "meaning": "master-canvas centre-bottom coordinate, not anatomical contact"},
+    "baseline": {"y": 1254, "meaning": "page/container baseline, not alpha-bbox alignment"},
+    "source_placement": "All 1254-square sources enter at x=0,y=0,scale=1.0,rotation=0; never auto-centre alpha bbox.",
+    "contact_point": "UNKNOWN — artist must mark paw/book/page/stamp/tail contacts before production; do not infer from alpha bbox.",
+    "prohibitions": ["global scale", "floating", "bounce", "fade as performance", "camera motion", "root drift", "book-paw drift", "opaque background", "color-key contamination", "identity drift"]
+  },
+  "actions": [
+    {
+      "action_id": "P0-01-idle-waiting",
+      "name_zh": "静候与注意回应",
+      "priority": "P0",
+      "trigger": "Meet Milo 或无活动的安静等待时刻",
+      "emotion_goal": "安静可得、被注意到后自然安定",
+      "story": "坐好等待 → 耳朵和视线先注意到人 → 温和确认 → 回到原姿势。",
+      "duration_seconds": 3.6,
+      "loop": true,
+      "recommended_final_frame_count": 5,
+      "source_asset": "Design/CharacterAssets/VintageShojo/Approved/Milo/milo_idle_v1.png",
+      "landing_asset": "Design/CharacterAssets/VintageShojo/Approved/Milo/milo_idle_v1.png",
+      "canvas": "1254x1254 RGBA transparent",
+      "root_anchor": "canvas_root=(627,1254), fixed",
+      "baseline": "y=1254 fixed; physical ground contact UNKNOWN",
+      "contact_point": "UNKNOWN; preserve original paws, hips, tail curl and lower-left notebook relationship",
+      "reduce_motion_frame": "P0-01-KF01 (unchanged milo_idle_v1.png held static)",
+      "keyframes": [
+        {"id":"P0-01-KF01","time_seconds":0.0,"gaze":"微微上左","eyes":"柔和睁开","ears":"中性竖立","head_angle":"源图角度","chest_weight":"稳定坐姿","forepaws":"并排着地","hind_hips":"坐稳","tail":"右侧卷曲","prop_contact":"左下闭合笔记本不动","emotion":"耐心等待","change_from_previous":"起始源图","must_not_move_support":"双前爪、臀部、尾根和笔记本位置","generation_prompt":"基于 Approved 参考图进行 image-edit，禁止 text-to-image。参考：Design/CharacterAssets/VintageShojo/Approved/Milo/milo_idle_v1.png。输出 1254x1254 RGBA 透明背景；固定画布、相机、尺度与 canvas_root=(627,1254)。仅保留源图：视线微微上左、柔和睁眼、耳朵中性、头部源图角度、胸腹稳定、双前爪并排、臀部坐稳、右尾卷曲、左下闭合笔记本不动；情绪耐心等待。与前后帧连续。禁止整体缩放、漂浮、弹跳、淡入淡出、相机移动、alpha bbox 居中、根点/书本/爪距离漂移、身份或色键污染。"},
+        {"id":"P0-01-KF02","time_seconds":0.55,"gaze":"移向中央","eyes":"半眨眼","ears":"近侧耳先前转","head_angle":"向中央1-2度","chest_weight":"极小前倾注意","forepaws":"保持着地","hind_hips":"不动","tail":"尾尖轻松一小弧","prop_contact":"笔记本不动","emotion":"注意到你","change_from_previous":"眼睛和耳朵先动","must_not_move_support":"双前爪、臀部、笔记本固定","generation_prompt":"基于 Approved 参考图进行 image-edit，禁止 text-to-image。参考：Design/CharacterAssets/VintageShojo/Approved/Milo/milo_idle_v1.png 及紧邻 P0-01-KF01。输出 1254x1254 RGBA 透明背景；固定画布、相机、尺度与 canvas_root=(627,1254)。仅变化：视线移向中央、半眨眼、近侧耳先前转、头向中央1-2度、胸腹极小前倾、尾尖一小松弧；前爪仍着地、臀部不动、左下闭合笔记本不动。情绪是注意到你。禁止整体缩放、漂浮、弹跳、淡入淡出、相机移动、自动居中、根点/书本/爪距离漂移、身份或色键污染。"},
+        {"id":"P0-01-KF03","time_seconds":1.2,"gaze":"正中面对用户","eyes":"眨眼后温和睁开","ears":"双耳前向","head_angle":"水平停住","chest_weight":"轻微抬胸","forepaws":"左爪轻压但不位移","hind_hips":"不动","tail":"尾尖靠近身体","prop_contact":"无新增接触，笔记本不动","emotion":"欢迎","change_from_previous":"主注意动作","must_not_move_support":"爪底、臀部、尾根、笔记本固定","generation_prompt":"基于 Approved 参考图进行 image-edit，禁止 text-to-image。参考：Design/CharacterAssets/VintageShojo/Approved/Milo/milo_idle_v1.png 及紧邻 P0-01-KF02。输出 1254x1254 RGBA 透明背景；固定画布、相机、尺度与 canvas_root=(627,1254)。仅变化：视线正中、眨眼后温和睁开、双耳前向、头水平停住、胸腹轻微抬起、左前爪只轻压不位移、尾尖略靠近身体；臀部、爪底、左下闭合笔记本完全固定。情绪欢迎。禁止整体缩放、漂浮、弹跳、淡入淡出、相机移动、自动居中、根点/书本/爪距离漂移、身份或色键污染。"},
+        {"id":"P0-01-KF04","time_seconds":2.1,"gaze":"保持中央","eyes":"温暖微眯","ears":"略向外放松","head_angle":"回到源图轻倾","chest_weight":"呼气回落","forepaws":"不动","hind_hips":"不动","tail":"安静落下","prop_contact":"笔记本不动","emotion":"安慰停顿","change_from_previous":"注意变成安定","must_not_move_support":"所有源图支撑固定","generation_prompt":"基于 Approved 参考图进行 image-edit，禁止 text-to-image。参考：Design/CharacterAssets/VintageShojo/Approved/Milo/milo_idle_v1.png 及紧邻 P0-01-KF03。输出 1254x1254 RGBA 透明背景；固定画布、相机、尺度与 canvas_root=(627,1254)。仅变化：视线仍在中央、眼睛温暖微眯、耳朵略向外放松、头回到源图轻倾、胸腹呼气回落、尾巴安静；双前爪、臀部、左下闭合笔记本完全不动。情绪安慰停顿。禁止整体缩放、漂浮、弹跳、淡入淡出、相机移动、自动居中、根点/书本/爪距离漂移、身份或色键污染。"},
+        {"id":"P0-01-KF05","time_seconds":3.1,"gaze":"回到微微上左","eyes":"源图柔和睁开","ears":"源图中性","head_angle":"源图角度","chest_weight":"稳定","forepaws":"源图","hind_hips":"源图","tail":"源图卷曲","prop_contact":"源图笔记本","emotion":"自然收势","change_from_previous":"回到静态落点","must_not_move_support":"所有源图支撑固定","generation_prompt":"基于 Approved 参考图进行 image-edit，禁止 text-to-image。参考：Design/CharacterAssets/VintageShojo/Approved/Milo/milo_idle_v1.png 及紧邻 P0-01-KF04。输出 1254x1254 RGBA 透明背景；固定画布、相机、尺度与 canvas_root=(627,1254)。回到 milo_idle_v1 源图的微微上左视线、柔和睁眼、中性耳朵、头角、稳定胸腹、双前爪、坐姿、右尾卷曲和左下闭合笔记本关系；作为静态自然收势。禁止整体缩放、漂浮、弹跳、淡入淡出、相机移动、自动居中、根点/书本/爪距离漂移、身份或色键污染。"}
+      ]
+    },
+    {
+      "action_id": "P0-02-goal-notice-pact",
+      "name_zh": "目标确认与契约",
+      "priority": "P0",
+      "trigger": "任务输入或时长选择成为页面焦点",
+      "emotion_goal": "安静确认这一次的意图",
+      "story": "看向笔记 → 注意到目标 → 轻压铅笔旁的页 → 目光回到任务。",
+      "duration_seconds": 3.8,
+      "loop": false,
+      "recommended_final_frame_count": 5,
+      "source_asset": "Design/CharacterAssets/VintageShojo/Approved/Milo/milo_pact_v1.png",
+      "landing_asset": "Design/CharacterAssets/VintageShojo/Approved/Milo/milo_pact_v1.png",
+      "canvas": "1254x1254 RGBA transparent",
+      "root_anchor": "canvas_root=(627,1254), fixed",
+      "baseline": "y=1254 fixed; physical book/paw contact UNKNOWN",
+      "contact_point": "UNKNOWN; preserve notebook spine, pencil angle, paw contacts and tail relationship",
+      "reduce_motion_frame": "P0-02-KF01 (unchanged milo_pact_v1.png held static)",
+      "keyframes": [
+        {"id":"P0-02-KF01","time_seconds":0.0,"gaze":"向下看笔记本","eyes":"平静睁开","ears":"中性","head_angle":"源图向下","chest_weight":"坐在书前","forepaws":"左爪近铅笔，右爪在书沿","hind_hips":"坐稳","tail":"右侧静置","prop_contact":"螺旋本与铅笔源图关系","emotion":"倾听","change_from_previous":"起始源图","must_not_move_support":"书脊、铅笔、爪底和臀部固定","generation_prompt":"基于 Approved 参考图进行 image-edit，禁止 text-to-image。参考：Design/CharacterAssets/VintageShojo/Approved/Milo/milo_pact_v1.png。输出 1254x1254 RGBA 透明背景；固定画布、相机、尺度与 canvas_root=(627,1254)。仅保留源图：视线向下看螺旋笔记本、平静睁眼、中性耳朵、向下头角、坐姿胸腹、左爪近铅笔、右爪在书沿、右尾静置；书脊、铅笔和爪接触完全固定。情绪倾听。禁止整体缩放、漂浮、弹跳、淡入淡出、相机移动、自动居中、根点/书本/铅笔/爪距离漂移、身份或色键污染。"},
+        {"id":"P0-02-KF02","time_seconds":0.6,"gaze":"从页移向任务卡方向","eyes":"下眼睑柔和","ears":"左耳先转","head_angle":"上抬1-2度","chest_weight":"微微前备","forepaws":"留在原书侧位置","hind_hips":"不动","tail":"尾尖浅弧","prop_contact":"铅笔角度不变","emotion":"注意到目标","change_from_previous":"耳朵再视线先动","must_not_move_support":"书脊、铅笔、右爪、臀部固定","generation_prompt":"基于 Approved 参考图进行 image-edit，禁止 text-to-image。参考：Design/CharacterAssets/VintageShojo/Approved/Milo/milo_pact_v1.png 及紧邻 P0-02-KF01。输出 1254x1254 RGBA 透明背景；固定画布、相机、尺度与 canvas_root=(627,1254)。仅变化：视线从页移向任务卡方向、下眼睑柔和、左耳先转、头上抬1-2度、胸腹微前备、尾尖一条浅弧；两前爪留在原书侧位置，臀部不动，螺旋本和铅笔角度不变。情绪注意到目标。禁止整体缩放、漂浮、弹跳、淡入淡出、相机移动、自动居中、根点/书本/铅笔/爪距离漂移、身份或色键污染。"},
+        {"id":"P0-02-KF03","time_seconds":1.35,"gaze":"正中前方","eyes":"一眨后睁开","ears":"双耳注意","head_angle":"略高但无位移","chest_weight":"胸腹轻抬","forepaws":"左爪只加压力不移动","hind_hips":"不动","tail":"安静","prop_contact":"铅笔留在源图角度","emotion":"确认契约","change_from_previous":"视线与轻压主动作","must_not_move_support":"书脊、铅笔、右爪、臀部固定","generation_prompt":"基于 Approved 参考图进行 image-edit，禁止 text-to-image。参考：Design/CharacterAssets/VintageShojo/Approved/Milo/milo_pact_v1.png 及紧邻 P0-02-KF02。输出 1254x1254 RGBA 透明背景；固定画布、相机、尺度与 canvas_root=(627,1254)。仅变化：视线正中、一眨后睁开、双耳注意、头略高、胸腹轻抬、左前爪在铅笔旁只加压力不移动；右爪、臀部、螺旋本书脊和铅笔角度固定。情绪确认契约。禁止整体缩放、漂浮、弹跳、淡入淡出、相机移动、自动居中、根点/书本/铅笔/爪距离漂移、身份或色键污染。"},
+        {"id":"P0-02-KF04","time_seconds":2.35,"gaze":"从人回到半程笔记本","eyes":"柔和","ears":"放松","head_angle":"停在半程","chest_weight":"释放","forepaws":"锚定","hind_hips":"不动","tail":"静置","prop_contact":"不翻页、不新增笔迹","emotion":"可以开始","change_from_previous":"情绪停顿","must_not_move_support":"所有书本和铅笔接触固定","generation_prompt":"基于 Approved 参考图进行 image-edit，禁止 text-to-image。参考：Design/CharacterAssets/VintageShojo/Approved/Milo/milo_pact_v1.png 及紧邻 P0-02-KF03。输出 1254x1254 RGBA 透明背景；固定画布、相机、尺度与 canvas_root=(627,1254)。仅变化：视线从人回到半程笔记本、眼睛柔和、耳朵放松、头停在半程、胸腹释放；前爪和臀部锚定，不翻页、不新增笔迹，螺旋本和铅笔完全不动。情绪可以开始。禁止整体缩放、漂浮、弹跳、淡入淡出、相机移动、自动居中、根点/书本/铅笔/爪距离漂移、身份或色键污染。"},
+        {"id":"P0-02-KF05","time_seconds":3.3,"gaze":"回到页","eyes":"源图平静","ears":"源图","head_angle":"源图","chest_weight":"稳定","forepaws":"源图","hind_hips":"源图","tail":"源图","prop_contact":"源图笔记本和铅笔","emotion":"收束承诺","change_from_previous":"回到静态落点","must_not_move_support":"所有书本和铅笔接触固定","generation_prompt":"基于 Approved 参考图进行 image-edit，禁止 text-to-image。参考：Design/CharacterAssets/VintageShojo/Approved/Milo/milo_pact_v1.png 及紧邻 P0-02-KF04。输出 1254x1254 RGBA 透明背景；固定画布、相机、尺度与 canvas_root=(627,1254)。回到 milo_pact_v1 源图的向下视线、平静眼睛、耳朵、头角、胸腹、双前爪、坐姿、右尾及螺旋笔记本与铅笔关系，作为静态收束承诺。禁止整体缩放、漂浮、弹跳、淡入淡出、相机移动、自动居中、根点/书本/铅笔/爪距离漂移、身份或色键污染。"}
+      ]
+    },
+    {
+      "action_id": "P0-03-focus-ambient",
+      "name_zh": "专注氛围",
+      "priority": "P0",
+      "trigger": "正式 focusing 页面",
+      "emotion_goal": "安静投入，不宣称暂停或系统进度",
+      "story": "读页 → 眼睛追一行 → 慢眨与呼吸 → 重新读页。",
+      "duration_seconds": 4.0,
+      "loop": true,
+      "recommended_final_frame_count": 5,
+      "source_asset": "Design/CharacterAssets/VintageShojo/Approved/Milo/milo_focus_v2.png",
+      "landing_asset": "Design/CharacterAssets/VintageShojo/Approved/Milo/milo_focus_v2.png",
+      "canvas": "1254x1254 RGBA transparent",
+      "root_anchor": "canvas_root=(627,1254), fixed",
+      "baseline": "y=1254 fixed; physical book/paw contact UNKNOWN",
+      "contact_point": "UNKNOWN; preserve open-book, both paw, low hips and tail-root relationships",
+      "reduce_motion_frame": "P0-03-KF01 (unchanged milo_focus_v2.png held static)",
+      "keyframes": [
+        {"id":"P0-03-KF01","time_seconds":0.0,"gaze":"向下读书","eyes":"专注睁开","ears":"中性向前","head_angle":"低源图角度","chest_weight":"低伏阅读","forepaws":"双爪在书上","hind_hips":"低伏固定","tail":"右侧环绕","prop_contact":"书和爪源图接触","emotion":"投入","change_from_previous":"起始源图","must_not_move_support":"书、双爪、臀部、尾根固定","generation_prompt":"基于 Approved 参考图进行 image-edit，禁止 text-to-image。参考：Design/CharacterAssets/VintageShojo/Approved/Milo/milo_focus_v2.png。输出 1254x1254 RGBA 透明背景；固定画布、相机、尺度与 canvas_root=(627,1254)。仅保留源图：向下读书、专注睁眼、中性向前耳朵、低头角、低伏胸腹、双前爪在书上、低伏臀部、右侧环尾；书页与爪接触不动。情绪投入。禁止整体缩放、漂浮、弹跳、淡入淡出、相机移动、自动居中、根点/书本/爪距离漂移、身份或色键污染。"},
+        {"id":"P0-03-KF02","time_seconds":0.7,"gaze":"沿书页短行移动","eyes":"眼睑略收","ears":"远耳小幅后转又回","head_angle":"随视线1度","chest_weight":"一次安静吸气","forepaws":"持续压页","hind_hips":"不动","tail":"不移动","prop_contact":"页缘不动","emotion":"阅读","change_from_previous":"眼睛先行头跟随","must_not_move_support":"书、双爪、臀部固定","generation_prompt":"基于 Approved 参考图进行 image-edit，禁止 text-to-image。参考：Design/CharacterAssets/VintageShojo/Approved/Milo/milo_focus_v2.png 及紧邻 P0-03-KF01。输出 1254x1254 RGBA 透明背景；固定画布、相机、尺度与 canvas_root=(627,1254)。仅变化：视线沿书页短行移动、眼睑略收、远耳小幅后转又回、头随视线1度、胸腹一次安静吸气；双爪持续压页、臀部与尾巴不移动、页缘不动。情绪阅读。禁止整体缩放、漂浮、弹跳、淡入淡出、相机移动、自动居中、根点/书本/爪距离漂移、身份或色键污染。"},
+        {"id":"P0-03-KF03","time_seconds":1.55,"gaze":"停在页中央","eyes":"一次慢眨","ears":"回到前向","head_angle":"轻微下点","chest_weight":"呼气贴近书","forepaws":"一根趾头仅暗示屈伸","hind_hips":"不动","tail":"尾尖小收势","prop_contact":"不翻页","emotion":"安静节奏","change_from_previous":"慢眨、呼吸、趾头屈伸主动作","must_not_move_support":"书、爪底、臀部固定","generation_prompt":"基于 Approved 参考图进行 image-edit，禁止 text-to-image。参考：Design/CharacterAssets/VintageShojo/Approved/Milo/milo_focus_v2.png 及紧邻 P0-03-KF02。输出 1254x1254 RGBA 透明背景；固定画布、相机、尺度与 canvas_root=(627,1254)。仅变化：视线停页中央、一次慢眨、双耳回前、头轻微下点、胸腹呼气贴近书、仅暗示一根趾头屈伸、尾尖小收势；不翻页，书、爪底和臀部固定。情绪安静节奏。禁止整体缩放、漂浮、弹跳、淡入淡出、相机移动、自动居中、根点/书本/爪距离漂移、身份或色键污染。"},
+        {"id":"P0-03-KF04","time_seconds":2.55,"gaze":"略高于书页","eyes":"柔和睁开","ears":"先警觉后放松","head_angle":"上抬1度","chest_weight":"小抬起","forepaws":"不动","hind_hips":"不动","tail":"静止","prop_contact":"书页不动","emotion":"正念停顿","change_from_previous":"小注意重置","must_not_move_support":"书、双爪、臀部固定","generation_prompt":"基于 Approved 参考图进行 image-edit，禁止 text-to-image。参考：Design/CharacterAssets/VintageShojo/Approved/Milo/milo_focus_v2.png 及紧邻 P0-03-KF03。输出 1254x1254 RGBA 透明背景；固定画布、相机、尺度与 canvas_root=(627,1254)。仅变化：视线略高于书页、眼睛柔和睁开、耳朵先警觉后放松、头上抬1度、胸腹小抬起；双爪、臀部、尾巴和书页不动。情绪正念停顿。禁止整体缩放、漂浮、弹跳、淡入淡出、相机移动、自动居中、根点/书本/爪距离漂移、身份或色键污染。"},
+        {"id":"P0-03-KF05","time_seconds":3.55,"gaze":"回到页","eyes":"源图专注","ears":"源图","head_angle":"源图","chest_weight":"源图低伏","forepaws":"源图","hind_hips":"源图","tail":"源图","prop_contact":"源图书页","emotion":"自然收势","change_from_previous":"回到静态落点","must_not_move_support":"所有源图接触固定","generation_prompt":"基于 Approved 参考图进行 image-edit，禁止 text-to-image。参考：Design/CharacterAssets/VintageShojo/Approved/Milo/milo_focus_v2.png 及紧邻 P0-03-KF04。输出 1254x1254 RGBA 透明背景；固定画布、相机、尺度与 canvas_root=(627,1254)。回到 milo_focus_v2 源图的读页视线、专注眼睛、耳朵、低头角、低伏胸腹、双前爪、臀部、右尾与开书关系，作为静态自然收势。禁止整体缩放、漂浮、弹跳、淡入淡出、相机移动、自动居中、根点/书本/爪距离漂移、身份或色键污染。"}
+      ]
+    },
+    {
+      "action_id": "P0-04-return",
+      "name_zh": "回来后等待",
+      "priority": "P0",
+      "trigger": "正式 Necessary Access/Waiting 页面；不代表 Shield 成功",
+      "emotion_goal": "患者、尊重地确认回来",
+      "story": "等待 → 发现人回来 → 温和确认 → 不催促地回到等待。",
+      "duration_seconds": 3.8,
+      "loop": false,
+      "recommended_final_frame_count": 5,
+      "source_asset": "Design/CharacterAssets/VintageShojo/Approved/Milo/milo_return_v1.png",
+      "landing_asset": "Design/CharacterAssets/VintageShojo/Approved/Milo/milo_return_v1.png",
+      "canvas": "1254x1254 RGBA transparent",
+      "root_anchor": "canvas_root=(627,1254), fixed",
+      "baseline": "y=1254 fixed; physical book/page/bookmark contact UNKNOWN",
+      "contact_point": "UNKNOWN; preserve raised-page paw, book base, bookmark and seated support relationships",
+      "reduce_motion_frame": "P0-04-KF01 (unchanged milo_return_v1.png held static)",
+      "keyframes": [
+        {"id":"P0-04-KF01","time_seconds":0.0,"gaze":"上右","eyes":"希望地睁开","ears":"竖立","head_angle":"源图上抬","chest_weight":"坐姿","forepaws":"左爪支撑抬页，右爪近书","hind_hips":"坐稳","tail":"右侧上扬","prop_contact":"书、书页、书签源图关系","emotion":"等待","change_from_previous":"起始源图","must_not_move_support":"书基、抬页爪、臀部固定","generation_prompt":"基于 Approved 参考图进行 image-edit，禁止 text-to-image。参考：Design/CharacterAssets/VintageShojo/Approved/Milo/milo_return_v1.png。输出 1254x1254 RGBA 透明背景；固定画布、相机、尺度与 canvas_root=(627,1254)。仅保留源图：上右视线、希望睁眼、竖耳、上抬头角、坐姿胸腹、左爪支撑抬页、右爪近书、右尾上扬；书、书页和书签关系不动。情绪等待。禁止整体缩放、漂浮、弹跳、淡入淡出、相机移动、自动居中、根点/书本/书页/爪距离漂移、身份或色键污染。"},
+        {"id":"P0-04-KF02","time_seconds":0.55,"gaze":"移向人","eyes":"半眨眼","ears":"近耳先转","head_angle":"向中央1-2度","chest_weight":"轻微前确认","forepaws":"抬页爪保持原接触","hind_hips":"不动","tail":"尾尖略松","prop_contact":"页弯、书签、书不动","emotion":"你回来了","change_from_previous":"眼睛与耳先动","must_not_move_support":"抬页爪、书、臀部固定","generation_prompt":"基于 Approved 参考图进行 image-edit，禁止 text-to-image。参考：Design/CharacterAssets/VintageShojo/Approved/Milo/milo_return_v1.png 及紧邻 P0-04-KF01。输出 1254x1254 RGBA 透明背景；固定画布、相机、尺度与 canvas_root=(627,1254)。仅变化：视线移向人、半眨眼、近耳先转、头向中央1-2度、胸腹轻微前确认、尾尖略松；抬页左爪保持原接触，书页弯度、书签和书不动，臀部不动。情绪你回来了。禁止整体缩放、漂浮、弹跳、淡入淡出、相机移动、自动居中、根点/书本/书页/爪距离漂移、身份或色键污染。"},
+        {"id":"P0-04-KF03","time_seconds":1.3,"gaze":"正中","eyes":"眨眼后温暖睁开","ears":"双耳前向","head_angle":"水平停住","chest_weight":"轻抬胸无位移","forepaws":"右爪轻稳书沿","hind_hips":"不动","tail":"保持","prop_contact":"不翻页","emotion":"回来确认","change_from_previous":"目光和重量主动作","must_not_move_support":"抬页爪、书、书签、臀部固定","generation_prompt":"基于 Approved 参考图进行 image-edit，禁止 text-to-image。参考：Design/CharacterAssets/VintageShojo/Approved/Milo/milo_return_v1.png 及紧邻 P0-04-KF02。输出 1254x1254 RGBA 透明背景；固定画布、相机、尺度与 canvas_root=(627,1254)。仅变化：视线正中、眨眼后温暖睁开、双耳前向、头水平停住、胸腹轻抬但无位移、右爪轻稳书沿；左爪仍支撑同一书页，不翻页，书签、书和臀部固定。情绪回来确认。禁止整体缩放、漂浮、弹跳、淡入淡出、相机移动、自动居中、根点/书本/书页/爪距离漂移、身份或色键污染。"},
+        {"id":"P0-04-KF04","time_seconds":2.3,"gaze":"保持人","eyes":"柔和","ears":"回中性","head_angle":"回源图轻倾","chest_weight":"释放","forepaws":"不动","hind_hips":"不动","tail":"安定","prop_contact":"所有道具不动","emotion":"不催促邀请","change_from_previous":"情绪停顿","must_not_move_support":"书页、书、双爪、臀部固定","generation_prompt":"基于 Approved 参考图进行 image-edit，禁止 text-to-image。参考：Design/CharacterAssets/VintageShojo/Approved/Milo/milo_return_v1.png 及紧邻 P0-04-KF03。输出 1254x1254 RGBA 透明背景；固定画布、相机、尺度与 canvas_root=(627,1254)。仅变化：视线仍在人、眼睛柔和、耳朵回中性、头回源图轻倾、胸腹释放、尾巴安定；双爪、书页、书、书签和臀部不动。情绪不催促邀请。禁止整体缩放、漂浮、弹跳、淡入淡出、相机移动、自动居中、根点/书本/书页/爪距离漂移、身份或色键污染。"},
+        {"id":"P0-04-KF05","time_seconds":3.25,"gaze":"回到源图上右","eyes":"源图","ears":"源图","head_angle":"源图","chest_weight":"源图","forepaws":"源图","hind_hips":"源图","tail":"源图","prop_contact":"源图书、页、书签","emotion":"耐心收势","change_from_previous":"回到静态落点","must_not_move_support":"所有源图接触固定","generation_prompt":"基于 Approved 参考图进行 image-edit，禁止 text-to-image。参考：Design/CharacterAssets/VintageShojo/Approved/Milo/milo_return_v1.png 及紧邻 P0-04-KF04。输出 1254x1254 RGBA 透明背景；固定画布、相机、尺度与 canvas_root=(627,1254)。回到 milo_return_v1 源图的上右视线、眼睛、耳朵、头角、胸腹、抬页左爪、右爪、坐姿、尾巴以及书、书页、书签关系，作为静态耐心收势。禁止整体缩放、漂浮、弹跳、淡入淡出、相机移动、自动居中、根点/书本/书页/爪距离漂移、身份或色键污染。"}
+      ]
+    },
+    {
+      "action_id": "P0-05-completion",
+      "name_zh": "完成确认",
+      "priority": "P0",
+      "trigger": "现有 reducer 已完成且进入 completed 页面后",
+      "emotion_goal": "小而落地的共同完成认可",
+      "story": "压印完成 → 注意到人 → 放松印章压力 → 温暖停顿 → 回源图。",
+      "duration_seconds": 3.5,
+      "loop": false,
+      "recommended_final_frame_count": 5,
+      "source_asset": "Design/CharacterAssets/VintageShojo/Approved/Milo/milo_complete_v1.png",
+      "landing_asset": "Design/CharacterAssets/VintageShojo/Approved/Milo/milo_complete_v1.png",
+      "canvas": "1254x1254 RGBA transparent",
+      "root_anchor": "canvas_root=(627,1254), fixed",
+      "baseline": "y=1254 fixed; physical stamp/paper/paw contact UNKNOWN",
+      "contact_point": "UNKNOWN; preserve stamp centre, paw-print paper, forepaw and seated support relationships",
+      "reduce_motion_frame": "P0-05-KF01 (unchanged milo_complete_v1.png held static)",
+      "keyframes": [
+        {"id":"P0-05-KF01","time_seconds":0.0,"gaze":"向下看印章和纸","eyes":"平静睁开","ears":"中性","head_angle":"源图轻倾","chest_weight":"坐在纸前","forepaws":"左爪在印章，右爪支撑","hind_hips":"坐稳","tail":"右侧弯曲","prop_contact":"印章、爪印纸、双爪源图关系","emotion":"最后一笔","change_from_previous":"起始源图","must_not_move_support":"纸、印章基、爪、臀部固定","generation_prompt":"基于 Approved 参考图进行 image-edit，禁止 text-to-image。参考：Design/CharacterAssets/VintageShojo/Approved/Milo/milo_complete_v1.png。输出 1254x1254 RGBA 透明背景；固定画布、相机、尺度与 canvas_root=(627,1254)。仅保留源图：向下看印章和纸、平静睁眼、中性耳、轻倾头角、坐姿胸腹、左爪在印章、右爪支撑、右尾弯曲；印章、爪印纸和双爪关系不动。情绪最后一笔。禁止整体缩放、漂浮、弹跳、淡入淡出、相机移动、自动居中、根点/纸张/印章/爪距离漂移、身份或色键污染。"},
+        {"id":"P0-05-KF02","time_seconds":0.45,"gaze":"开始向用户","eyes":"满意半眨","ears":"双耳微抬","head_angle":"上抬1度","chest_weight":"轻抬胸","forepaws":"印章爪保持竖向接触","hind_hips":"不动","tail":"尾尖微抬","prop_contact":"印章仍压同一点","emotion":"认可开始","change_from_previous":"眼睛耳朵先动","must_not_move_support":"纸、印章基、爪、臀部固定","generation_prompt":"基于 Approved 参考图进行 image-edit，禁止 text-to-image。参考：Design/CharacterAssets/VintageShojo/Approved/Milo/milo_complete_v1.png 及紧邻 P0-05-KF01。输出 1254x1254 RGBA 透明背景；固定画布、相机、尺度与 canvas_root=(627,1254)。仅变化：视线开始向用户、满意半眨、双耳微抬、头上抬1度、胸腹轻抬、尾尖微抬；印章爪保持竖向接触，印章仍压纸上同一点，右爪、臀部和纸不动。情绪认可开始。禁止整体缩放、漂浮、弹跳、淡入淡出、相机移动、自动居中、根点/纸张/印章/爪距离漂移、身份或色键污染。"},
+        {"id":"P0-05-KF03","time_seconds":1.05,"gaze":"正中","eyes":"明亮睁开但尺寸不变","ears":"注意","head_angle":"小幅自豪抬起","chest_weight":"轻抬无缩放","forepaws":"印章爪松压但不移动","hind_hips":"不动","tail":"小正向弧","prop_contact":"不新增爪印，印章仍对位","emotion":"一起完成","change_from_previous":"放松印章压力主动作","must_not_move_support":"印章中心、纸、爪、臀部固定","generation_prompt":"基于 Approved 参考图进行 image-edit，禁止 text-to-image。参考：Design/CharacterAssets/VintageShojo/Approved/Milo/milo_complete_v1.png 及紧邻 P0-05-KF02。输出 1254x1254 RGBA 透明背景；固定画布、相机、尺度与 canvas_root=(627,1254)。仅变化：视线正中、眼睛明亮睁开但大小不变、耳朵注意、头小幅自豪抬起、胸腹轻抬无缩放、印章爪松压但不移动、尾巴小正向弧；不新增爪印，印章中心仍对位，纸、右爪和臀部固定。情绪一起完成。禁止整体缩放、漂浮、弹跳、淡入淡出、相机移动、自动居中、根点/纸张/印章/爪距离漂移、身份或色键污染。"},
+        {"id":"P0-05-KF04","time_seconds":1.95,"gaze":"保持用户","eyes":"温暖微眯","ears":"放松","head_angle":"回源图侧倾","chest_weight":"收回稳定","forepaws":"不动","hind_hips":"不动","tail":"安静","prop_contact":"印章和纸不动","emotion":"温暖停顿","change_from_previous":"完成情绪停顿","must_not_move_support":"纸、印章、爪、臀部固定","generation_prompt":"基于 Approved 参考图进行 image-edit，禁止 text-to-image。参考：Design/CharacterAssets/VintageShojo/Approved/Milo/milo_complete_v1.png 及紧邻 P0-05-KF03。输出 1254x1254 RGBA 透明背景；固定画布、相机、尺度与 canvas_root=(627,1254)。仅变化：视线仍在用户、眼睛温暖微眯、耳朵放松、头回源图侧倾、胸腹收回稳定、尾巴安静；双爪、印章、爪印纸和臀部不动。情绪温暖停顿。禁止整体缩放、漂浮、弹跳、淡入淡出、相机移动、自动居中、根点/纸张/印章/爪距离漂移、身份或色键污染。"},
+        {"id":"P0-05-KF05","time_seconds":2.95,"gaze":"回到源图下中","eyes":"源图","ears":"源图","head_angle":"源图","chest_weight":"源图","forepaws":"源图","hind_hips":"源图","tail":"源图","prop_contact":"源图印章和纸","emotion":"落地收势","change_from_previous":"回到静态落点","must_not_move_support":"所有源图接触固定","generation_prompt":"基于 Approved 参考图进行 image-edit，禁止 text-to-image。参考：Design/CharacterAssets/VintageShojo/Approved/Milo/milo_complete_v1.png 及紧邻 P0-05-KF04。输出 1254x1254 RGBA 透明背景；固定画布、相机、尺度与 canvas_root=(627,1254)。回到 milo_complete_v1 源图的下中视线、眼睛、耳朵、头角、胸腹、左印章爪、右支撑爪、坐姿、尾巴及印章和爪印纸关系，作为静态落地收势。禁止整体缩放、漂浮、弹跳、淡入淡出、相机移动、自动居中、根点/纸张/印章/爪距离漂移、身份或色键污染。"}
+      ]
+    }
+  ],
+  "deferred_actions": [
+    {"priority":"P1","name_zh":"Launch 海报微注意","reason":"v0.6 已冻结为短静态品牌过渡；需要独立 runtime 授权。"},
+    {"priority":"P1","name_zh":"Start / Tap Response","reason":"当前正式路径刻意不使用 tap 反应或时间轴 transform。"},
+    {"priority":"P2","name_zh":"Gentle End","reason":"结束是危险语义，不能用角色表演扩展为新的产品承诺。"}
+  ]
+}
